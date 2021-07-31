@@ -1,0 +1,61 @@
+ion-card{
+  --background: #78350F;
+  --color: white;
+  ion-item{
+    --background: #78350F;
+    --color: white;
+  }
+  ion-button:first-child{
+    --background: #78350F;
+    --color: #D97706;
+    border: 1px solid #D97706;
+    border-radius: 5px;
+  }
+  ion-button:last-child{
+    --color: black;
+    --background: white;
+  }
+}
+
+ion-chip{
+  --color: #D97706;
+  border: 1px solid #D97706;
+}
+
+.select1{
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+
+.card2{
+  --background: white;
+  --color: black;
+  ion-item{
+    font-size: small;
+    --background: #F3F4F6;
+    --color: black;
+  }
+  div{
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+  }
+}
+
+.card3{
+  --background: white;
+  --color: black;
+  ion-item{
+    --background: white;
+    --color: black;
+  }
+}
+
+.card4{
+  --background: white;
+  --color: black;
+  ion-item{
+    --background: white;
+    --color: black;
+  }
+}

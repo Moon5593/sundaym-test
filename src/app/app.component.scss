@@ -1,0 +1,14 @@
+ion-split-pane{
+    --side-width: 15vw;
+}
+
+ion-button{
+    --background: #D97706;
+}
+
+ion-item.selected {
+    --background: #FEF3C7;
+    ion-icon{
+        color: #D97706;
+    }
+}

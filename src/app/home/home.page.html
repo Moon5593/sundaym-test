@@ -1,0 +1,697 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Dashboard</ion-title>
+
+    <ion-item slot="end" lines="none">
+      <ion-text>Hi, <b>Roy</b></ion-text>
+      <ion-avatar style="cursor: pointer;" class="ion-margin-start"><ion-img src="../assets/prof.png"></ion-img></ion-avatar>
+      <ion-icon style="cursor: pointer;" class="ion-margin-start" name="notifications-outline"></ion-icon>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" size-xl="9">
+        <ion-item lines="none">
+          <ion-label slot="start">Your upcoming calls</ion-label>
+          <ion-item slot="end" lines="none">
+            <ion-text>1/5</ion-text>
+            <ion-icon style="cursor: pointer;" name="chevron-forward-circle-outline" class="ion-padding-start"></ion-icon>
+          </ion-item>
+        </ion-item>
+      
+        <ion-card>
+          <ion-card-content class="ion-no-padding">
+            <ion-grid class="ion-no-padding">
+              <ion-row>
+                <ion-col size="12" class="ion-no-padding">
+                  <ion-item lines="none">
+                    <ion-img class="ion-margin-end ion-margin-top" style="cursor: pointer; width: 60px; height: 60px;" src="../assets/head_prof.jpg"></ion-img>
+                    <ion-label>
+                      <ion-text style="cursor: pointer;" class="ion-margin-end">Ground Up</ion-text>
+                      <ion-chip>94% Engagement Rate</ion-chip>
+                      <p style="color: white;">
+                        Technology • B2B • Series A
+                      </p>
+                    </ion-label>
+                  </ion-item>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-grid class="ion-margin-start ion-no-padding">
+                  <ion-row>
+                    <ion-col size="12" size-md="5" offset-md="1">
+                      <ion-text><span style="font-size: x-small;">Connected Yesterday</span></ion-text>
+                    </ion-col>
+                    <ion-col size="12" size-md="6" class="ion-text-end ion-padding-end ion-padding-bottom">
+                      <ion-button><ion-icon name="time-outline" class="ion-padding-end"></ion-icon>Schedule a Call</ion-button>
+                      <ion-button><ion-icon name="chatbubble-outline"></ion-icon></ion-button>
+                    </ion-col>
+                  </ion-row>
+                </ion-grid>
+              </ion-row>
+            </ion-grid>
+          </ion-card-content>
+        </ion-card>
+      
+        <div style="position: absolute; transform: translateX(-50%); left: 50%;">
+          <ion-icon style="cursor: pointer;" name="remove-outline"></ion-icon>
+          <ion-icon style="cursor: pointer;" name="remove-outline"></ion-icon>
+          <ion-icon style="cursor: pointer;" name="remove-outline"></ion-icon>
+          <ion-icon style="cursor: pointer;" name="remove-outline"></ion-icon>
+          <ion-icon style="cursor: pointer;" name="remove-outline"></ion-icon>
+        </div>
+      
+        <div class="ion-padding-top ion-padding-start">
+          <ion-text><b>Your Summary</b></ion-text>
+        </div>
+        <ion-grid class="ion-padding-start">
+          <ion-row>
+            <ion-col size-md="2" size-xs="3" class="ion-padding ion-margin-end ion-margin-bottom" style="background-color: #F3F4F6;">
+              <b>10</b><br><br>
+              <span style="font-size: small;">Total Mentions</span>
+            </ion-col>
+            <ion-col size-md="2" size-xs="3" class="ion-padding ion-margin-end ion-margin-bottom" style="background-color: #F3F4F6;">
+              <b>10</b><br><br>
+              <span style="font-size: small;">Repeat Sessions</span>
+            </ion-col>
+            <ion-col size-md="2" size-xs="3" class="ion-padding ion-margin-end ion-margin-bottom" style="background-color: #F3F4F6;">
+              <b>$1000</b><br><br>
+              <span style="font-size: small;">Total Avenues</span>
+            </ion-col>
+            <ion-col size-md="2" size-xs="3" class="ion-padding ion-margin-end ion-margin-bottom" style="background-color: #F3F4F6;">
+              <b>10</b><br><br>
+              <span style="font-size: small;">Months on Neonvest</span>
+            </ion-col>
+            <ion-col size-md="2" size-xs="3" class="ion-padding ion-margin-end ion-margin-bottom" style="background-color: #F3F4F6;">
+              <b>4.1</b><br><br>
+              <span style="font-size: small;">Average Rating</span>
+            </ion-col>
+            <ion-col size-md="2" size-xs="3" class="ion-padding ion-margin-end ion-margin-bottom" style="background-color: #F3F4F6;">
+              <b>78%</b><br><br>
+              <span style="font-size: small;">Match Quality</span>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      
+        <div class="ion-padding-top ion-padding-start">
+          <ion-text><b>Total Sessions <span style="color: #f8cd55;">10</span></b></ion-text>
+        </div>
+        <ion-card class="card2">
+          <ion-card-header>
+            <ion-select class="select1" value="m" style="width: min-content;">
+              <ion-select-option value="m">
+                Monthly
+              </ion-select-option>
+            </ion-select>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-grid class="ion-no-padding">
+              <ion-row>
+                <ion-col size="8">
+                  <canvas #barChart></canvas>
+                </ion-col>
+                <ion-col size="4" class="ion-text-center">
+                  <div class="ion-margin-bottom">
+                    <ion-icon name="arrow-down-outline" style="font-size: x-large; color: red;"></ion-icon>
+                    <ion-text class="ion-padding-start"><b><span style="font-size: x-large;">10/</span>month</b></ion-text>
+                  </div>
+                  <ion-label><b>Average Sessions</b></ion-label>
+                  <div><ion-label>Average sessions scheduled by you per month using NeonVest</ion-label></div>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+            <ion-item lines="none">
+              <ion-text slot="start">Want to increase your cost per month? <span style="cursor: pointer; color: #D97706;">know more</span></ion-text>
+              <ion-text style="cursor: pointer;" slot="end"><ion-icon name="close-outline"></ion-icon></ion-text>
+            </ion-item>
+          </ion-card-content>
+        </ion-card>
+      
+        <div class="ion-padding-top ion-padding-start">
+          <span style="float: left;"><b>Leaderboard for</b></span>
+          <span style="float: left; margin-left: 5px;">
+            <ion-select class="ion-align-items-start ion-no-padding" value="m" style="width: min-content; color: #D97706;" (ionChange)="onFilterUpdate($event)">
+              <ion-select-option value="m">
+                <b>Startup</b>
+              </ion-select-option>
+              <ion-select-option value="e">
+                <b>Experts</b>
+              </ion-select-option>
+            </ion-select>
+          </span>
+        </div><br>
+      
+        <div *ngIf="sup">
+          <div class="hidden-sm-down">
+            <ion-card class="card3">
+              <ion-grid>
+                <ion-row>
+                  <ion-col size="1">Rank</ion-col>
+                  <ion-col size="3">Startup</ion-col>
+                  <ion-col size="3">Country</ion-col>
+                  <ion-col size="3">Months on Neonware</ion-col>
+                  <ion-col size="2">Ratings</ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col size="1"><ion-item lines="none"><ion-label>#1</ion-label></ion-item></ion-col>
+                  <ion-col size="3">
+                    <ion-item style="cursor: pointer;" lines="none" class="ion-no-padding ion-align-items-start">
+                      <ion-avatar class="ion-margin-end"><ion-img src="../assets/tri.png"></ion-img></ion-avatar>
+                      <ion-label>
+                        <h3><b>Built To Last</b></h3>
+                        <p>Technology</p>
+                      </ion-label>
+                    </ion-item>
+                  </ion-col>
+                  <ion-col size="3">
+                    <ion-item lines="none" class="ion-no-padding">
+                      <ion-thumbnail style="width: 25px; height: 25px;">
+                        <ion-img src="../assets/india.png"></ion-img>
+                      </ion-thumbnail>
+                      <ion-label class="ion-padding-start">Mumbai, India</ion-label>
+                    </ion-item>
+                  </ion-col>
+                  <ion-col size="3">
+                    <ion-item lines="none" class="ion-no-padding">
+                      <ion-label>12 months</ion-label>
+                    </ion-item>
+                  </ion-col>
+                  <ion-col size="2">
+                    <ion-item lines="none" class="ion-no-padding">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-label>&nbsp;5.0</ion-label>
+                    </ion-item>
+                  </ion-col>
+                </ion-row>
+                <ion-item-divider></ion-item-divider>
+        
+                <ion-row>
+                  <ion-col size="1"><ion-item lines="none"><ion-label>#2</ion-label></ion-item></ion-col>
+                  <ion-col size="3">
+                    <ion-item style="cursor: pointer;" lines="none" class="ion-no-padding ion-align-items-start">
+                      <ion-avatar class="ion-margin-end"><ion-img src="../assets/new.png"></ion-img></ion-avatar>
+                      <ion-label>
+                        <h3><b>New Beginnings</b></h3>
+                        <p>Finance</p>
+                      </ion-label>
+                    </ion-item>
+                  </ion-col>
+                  <ion-col size="3">
+                    <ion-item lines="none" class="ion-no-padding">
+                      <ion-thumbnail style="width: 25px; height: 25px;">
+                        <ion-img src="../assets/united.png"></ion-img>
+                      </ion-thumbnail>
+                      <ion-label class="ion-padding-start">New York, USA</ion-label>
+                    </ion-item>
+                  </ion-col>
+                  <ion-col size="3">
+                    <ion-item lines="none" class="ion-no-padding">
+                      <ion-label>12 months</ion-label>
+                    </ion-item>
+                  </ion-col>
+                  <ion-col size="2">
+                    <ion-item lines="none" class="ion-no-padding">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-label>&nbsp;4.7</ion-label>
+                    </ion-item>
+                  </ion-col>
+                </ion-row>
+                <ion-item-divider></ion-item-divider>
+        
+                <ion-row>
+                  <ion-col size="1"><ion-item lines="none"><ion-label>#3</ion-label></ion-item></ion-col>
+                  <ion-col size="3">
+                    <ion-item style="cursor: pointer;" lines="none" class="ion-no-padding ion-align-items-start">
+                      <ion-avatar class="ion-margin-end"><ion-img src="../assets/stock.png"></ion-img></ion-avatar>
+                      <ion-label>
+                        <h3><b>Initial Invitation</b></h3>
+                        <p>Finance</p>
+                      </ion-label>
+                    </ion-item>
+                  </ion-col>
+                  <ion-col size="3">
+                    <ion-item lines="none" class="ion-no-padding">
+                      <ion-thumbnail style="width: 25px; height: 25px;">
+                        <ion-img src="../assets/canada.png"></ion-img>
+                      </ion-thumbnail>
+                      <ion-label class="ion-padding-start">Toronto, Canada</ion-label>
+                    </ion-item>
+                  </ion-col>
+                  <ion-col size="3">
+                    <ion-item lines="none" class="ion-no-padding">
+                      <ion-label>12 months</ion-label>
+                    </ion-item>
+                  </ion-col>
+                  <ion-col size="2">
+                    <ion-item lines="none" class="ion-no-padding">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-label>&nbsp;4.5</ion-label>
+                    </ion-item>
+                  </ion-col>
+                </ion-row>
+                <ion-item-divider></ion-item-divider>
+        
+                <ion-row>
+                  <ion-col size="1"><ion-item lines="none"><ion-label>#4</ion-label></ion-item></ion-col>
+                  <ion-col size="3">
+                    <ion-item style="cursor: pointer;" lines="none" class="ion-no-padding ion-align-items-start">
+                      <ion-avatar class="ion-margin-end"><ion-img src="../assets/grow.png"></ion-img></ion-avatar>
+                      <ion-label>
+                        <h3><b>Groww More</b></h3>
+                        <p>Finance</p>
+                      </ion-label>
+                    </ion-item>
+                  </ion-col>
+                  <ion-col size="3">
+                    <ion-item lines="none" class="ion-no-padding">
+                      <ion-thumbnail style="width: 25px; height: 25px;">
+                        <ion-img src="../assets/india.png"></ion-img>
+                      </ion-thumbnail>
+                      <ion-label class="ion-padding-start">New York, USA</ion-label>
+                    </ion-item>
+                  </ion-col>
+                  <ion-col size="3">
+                    <ion-item lines="none" class="ion-no-padding">
+                      <ion-label>12 months</ion-label>
+                    </ion-item>
+                  </ion-col>
+                  <ion-col size="2">
+                    <ion-item lines="none" class="ion-no-padding">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-label>&nbsp;4.4</ion-label>
+                    </ion-item>
+                  </ion-col>
+                </ion-row>
+                <ion-item-divider></ion-item-divider>
+        
+                <ion-row>
+                  <ion-col size="1"><ion-item lines="none"><ion-label>#5</ion-label></ion-item></ion-col>
+                  <ion-col size="3">
+                    <ion-item style="cursor: pointer;" lines="none" class="ion-no-padding ion-align-items-start">
+                      <ion-avatar class="ion-margin-end"><ion-img src="../assets/vice.png"></ion-img></ion-avatar>
+                      <ion-label>
+                        <h3><b>Tech Vice</b></h3>
+                        <p>Technology</p>
+                      </ion-label>
+                    </ion-item>
+                  </ion-col>
+                  <ion-col size="3">
+                    <ion-item lines="none" class="ion-no-padding">
+                      <ion-thumbnail style="width: 25px; height: 25px;">
+                        <ion-img src="../assets/india.png"></ion-img>
+                      </ion-thumbnail>
+                      <ion-label class="ion-padding-start">Mumbai, India</ion-label>
+                    </ion-item>
+                  </ion-col>
+                  <ion-col size="3">
+                    <ion-item lines="none" class="ion-no-padding">
+                      <ion-label>12 months</ion-label>
+                    </ion-item>
+                  </ion-col>
+                  <ion-col size="2">
+                    <ion-item lines="none" class="ion-no-padding">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-label>&nbsp;4.2</ion-label>
+                    </ion-item>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-card>
+          </div>
+        
+          <div class="hidden-md-up">
+            <ion-card class="card4">
+              <ion-grid class="ion-no-padding">
+                <ion-row>
+                  <ion-col size="2" class="ion-no-padding"><ion-item lines="none"><ion-label>#1</ion-label></ion-item></ion-col>
+                  <ion-col size="5" class="ion-no-padding">
+                    <ion-item style="cursor: pointer;" lines="none" class="ion-no-padding ion-align-items-start">
+                      <ion-avatar class="ion-margin-end"><ion-img src="../assets/tri.png"></ion-img></ion-avatar>
+                      <ion-label>
+                        <h3><b>Built To Last</b></h3>
+                        <p>Technology</p>
+                      </ion-label>
+                    </ion-item>
+                    <ion-item lines="none" class="ion-no-padding ion-align-items-start">
+                      <ion-thumbnail style="width: 25px; height: 25px;">
+                        <ion-img src="../assets/india.png"></ion-img>
+                      </ion-thumbnail>
+                      <ion-label class="ion-padding-start">Mumbai, India</ion-label>
+                    </ion-item>
+                  </ion-col>
+                  <ion-col size="5" class="ion-no-padding">
+                    <ion-item lines="none" class="ion-no-padding">
+                      <ion-label>
+                        <span>12 months</span>
+                        <ion-icon class="ion-padding-start" name="star"></ion-icon>
+                        <span>&nbsp;5.0</span>
+                      </ion-label>
+                    </ion-item>
+                  </ion-col>
+                </ion-row>
+                <ion-item-divider></ion-item-divider>
+        
+                <ion-row>
+                  <ion-col size="2" class="ion-no-padding"><ion-item lines="none"><ion-label>#2</ion-label></ion-item></ion-col>
+                  <ion-col size="5" class="ion-no-padding">
+                    <ion-item style="cursor: pointer;" lines="none" class="ion-no-padding ion-align-items-start">
+                      <ion-avatar class="ion-margin-end"><ion-img src="../assets/new.png"></ion-img></ion-avatar>
+                      <ion-label>
+                        <h3><b>New Beginnings</b></h3>
+                        <p>Finance</p>
+                      </ion-label>
+                    </ion-item>
+                    <ion-item lines="none" class="ion-no-padding ion-align-items-start">
+                      <ion-thumbnail style="width: 25px; height: 25px;">
+                        <ion-img src="../assets/united.png"></ion-img>
+                      </ion-thumbnail>
+                      <ion-label class="ion-padding-start">New York, USA</ion-label>
+                    </ion-item>
+                  </ion-col>
+                  <ion-col size="5" class="ion-no-padding">
+                    <ion-item lines="none" class="ion-no-padding">
+                      <ion-label>
+                        <span>12 months</span>
+                        <ion-icon class="ion-padding-start" name="star"></ion-icon>
+                        <span>&nbsp;4.7</span>
+                      </ion-label>
+                    </ion-item>
+                  </ion-col>
+                </ion-row>
+                <ion-item-divider></ion-item-divider>
+        
+                <ion-row>
+                  <ion-col size="2" class="ion-no-padding"><ion-item lines="none"><ion-label>#3</ion-label></ion-item></ion-col>
+                  <ion-col size="5" class="ion-no-padding">
+                    <ion-item style="cursor: pointer;" lines="none" class="ion-no-padding ion-align-items-start">
+                      <ion-avatar class="ion-margin-end"><ion-img src="../assets/stock.png"></ion-img></ion-avatar>
+                      <ion-label>
+                        <h3><b>Initial Invitation</b></h3>
+                        <p>Finance</p>
+                      </ion-label>
+                    </ion-item>
+                    <ion-item lines="none" class="ion-no-padding ion-align-items-start">
+                      <ion-thumbnail style="width: 25px; height: 25px;">
+                        <ion-img src="../assets/canada.png"></ion-img>
+                      </ion-thumbnail>
+                      <ion-label class="ion-padding-start">Toronto, Canada</ion-label>
+                    </ion-item>
+                  </ion-col>
+                  <ion-col size="5" class="ion-no-padding">
+                    <ion-item lines="none" class="ion-no-padding">
+                      <ion-label>
+                        <span>12 months</span>
+                        <ion-icon class="ion-padding-start" name="star"></ion-icon>
+                        <span>&nbsp;4.5</span>
+                      </ion-label>
+                    </ion-item>
+                  </ion-col>
+                </ion-row>
+                <ion-item-divider></ion-item-divider>
+        
+                <ion-row>
+                  <ion-col size="2" class="ion-no-padding"><ion-item lines="none"><ion-label>#4</ion-label></ion-item></ion-col>
+                  <ion-col size="5" class="ion-no-padding">
+                    <ion-item style="cursor: pointer;" lines="none" class="ion-no-padding ion-align-items-start">
+                      <ion-avatar class="ion-margin-end"><ion-img src="../assets/grow.png"></ion-img></ion-avatar>
+                      <ion-label>
+                        <h3><b>Groww More</b></h3>
+                        <p>Finance</p>
+                      </ion-label>
+                    </ion-item>
+                    <ion-item lines="none" class="ion-no-padding ion-align-items-start">
+                      <ion-thumbnail style="width: 25px; height: 25px;">
+                        <ion-img src="../assets/united.png"></ion-img>
+                      </ion-thumbnail>
+                      <ion-label class="ion-padding-start">New York, USA</ion-label>
+                    </ion-item>
+                  </ion-col>
+                  <ion-col size="5" class="ion-no-padding">
+                    <ion-item lines="none" class="ion-no-padding">
+                      <ion-label>
+                        <span>12 months</span>
+                        <ion-icon class="ion-padding-start" name="star"></ion-icon>
+                        <span>&nbsp;4.4</span>
+                      </ion-label>
+                    </ion-item>
+                  </ion-col>
+                </ion-row>
+                <ion-item-divider></ion-item-divider>
+        
+                <ion-row>
+                  <ion-col size="2" class="ion-no-padding"><ion-item lines="none"><ion-label>#5</ion-label></ion-item></ion-col>
+                  <ion-col size="5" class="ion-no-padding">
+                    <ion-item style="cursor: pointer;" lines="none" class="ion-no-padding ion-align-items-start">
+                      <ion-avatar class="ion-margin-end"><ion-img src="../assets/vice.png"></ion-img></ion-avatar>
+                      <ion-label>
+                        <h3><b>Tech Vice</b></h3>
+                        <p>Technology</p>
+                      </ion-label>
+                    </ion-item>
+                    <ion-item lines="none" class="ion-no-padding ion-align-items-start">
+                      <ion-thumbnail style="width: 25px; height: 25px;">
+                        <ion-img src="../assets/india.png"></ion-img>
+                      </ion-thumbnail>
+                      <ion-label class="ion-padding-start">Mumbai, India</ion-label>
+                    </ion-item>
+                  </ion-col>
+                  <ion-col size="5" class="ion-no-padding">
+                    <ion-item lines="none" class="ion-no-padding">
+                      <ion-label>
+                        <span>12 months</span>
+                        <ion-icon class="ion-padding-start" name="star"></ion-icon>
+                        <span>&nbsp;4.2</span>
+                      </ion-label>
+                    </ion-item>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-card>
+          </div>
+        </div>
+      
+        <div *ngIf="exp">
+          <ion-card class="card3">
+            <ion-grid>
+              <ion-row>
+                <ion-col size="6" style="background-color: #F3F4F6;" class="ion-no-padding">
+                  <ion-item lines="none" style="--background: #F3F4F6; cursor: pointer;">
+                    <ion-avatar>
+                      <ion-img src="../assets/prof.png"></ion-img>
+                    </ion-avatar>
+                    <ion-label class="ion-margin-start">
+                      <h2><b>Roy Wagner</b></h2>
+                      <p><b>Rank #12</b></p>
+                    </ion-label>
+                  </ion-item>
+                </ion-col>
+                <ion-col size="3" style="background-color: #F3F4F6;" class="ion-no-padding">
+                  <ion-item lines="none" style="--background: #F3F4F6;">
+                    <ion-label>
+                      <h2><b>79%</b></h2>
+                    </ion-label>
+                  </ion-item>
+                </ion-col>
+                <ion-col size="3" style="background-color: #F3F4F6;" class="ion-no-padding">
+                  <ion-item lines="none" style="--background: #F3F4F6;">
+                    <ion-label>
+                      <ion-icon style="color: green;" class="ion-padding-start" name="star"></ion-icon>
+                      <span>&nbsp;3.2</span>
+                    </ion-label>
+                  </ion-item>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col size="2" class="ion-no-padding"><ion-item lines="none"><ion-label>#1</ion-label></ion-item></ion-col>
+                <ion-col size="5" class="ion-no-padding">
+                  <ion-item style="cursor: pointer;" lines="none" class="ion-no-padding ion-align-items-start">
+                    <ion-avatar class="ion-margin-end"><ion-img src="../assets/user1.jfif"></ion-img></ion-avatar>
+                    <ion-label>
+                      <h3><b>Kathy Marshal</b></h3>
+                      <p>Technology</p>
+                    </ion-label>
+                  </ion-item>
+                  <ion-item lines="none" class="ion-no-padding ion-align-items-start">
+                    <ion-thumbnail style="width: 25px; height: 25px;">
+                      <ion-img src="../assets/india.png"></ion-img>
+                    </ion-thumbnail>
+                    <ion-label class="ion-padding-start">Mumbai, India</ion-label>
+                  </ion-item>
+                </ion-col>
+                <ion-col size="5" class="ion-no-padding">
+                  <ion-item lines="none" class="ion-no-padding">
+                    <ion-label>
+                      <span>100%</span>
+                      <ion-icon class="ion-padding-start" name="star"></ion-icon>
+                      <span>&nbsp;5.0</span>
+                      <ion-icon class="ion-padding-start" name="chevron-down-outline"></ion-icon>
+                    </ion-label>
+                  </ion-item>
+                </ion-col>
+              </ion-row>
+              <ion-item-divider></ion-item-divider>
+      
+              <ion-row>
+                <ion-col size="2" class="ion-no-padding"><ion-item lines="none"><ion-label>#2</ion-label></ion-item></ion-col>
+                <ion-col size="5" class="ion-no-padding">
+                  <ion-item style="cursor: pointer;" lines="none" class="ion-no-padding ion-align-items-start">
+                    <ion-avatar class="ion-margin-end"><ion-img src="../assets/user2.jfif"></ion-img></ion-avatar>
+                    <ion-label>
+                      <h3><b>Steve McCoy</b></h3>
+                      <p>Finance</p>
+                    </ion-label>
+                  </ion-item>
+                </ion-col>
+                <ion-col size="5" class="ion-no-padding">
+                  <ion-item lines="none" class="ion-no-padding">
+                    <ion-label>
+                      <span>95%</span>
+                      <ion-icon class="ion-padding-start" name="star"></ion-icon>
+                      <span>&nbsp;4.7</span>
+                      <ion-icon class="ion-padding-start" name="chevron-down-outline"></ion-icon>
+                    </ion-label>
+                  </ion-item>
+                </ion-col>
+              </ion-row>
+              <ion-item-divider></ion-item-divider>
+      
+              <ion-row>
+                <ion-col size="2" class="ion-no-padding"><ion-item lines="none"><ion-label>#3</ion-label></ion-item></ion-col>
+                <ion-col size="5" class="ion-no-padding">
+                  <ion-item style="cursor: pointer;" lines="none" class="ion-no-padding ion-align-items-start">
+                    <ion-avatar class="ion-margin-end"><ion-img src="../assets/user3.jfif"></ion-img></ion-avatar>
+                    <ion-label>
+                      <h3><b>Jose Porter</b></h3>
+                      <p>Finance</p>
+                    </ion-label>
+                  </ion-item>
+                </ion-col>
+                <ion-col size="5" class="ion-no-padding">
+                  <ion-item lines="none" class="ion-no-padding">
+                    <ion-label>
+                      <span>95%</span>
+                      <ion-icon class="ion-padding-start" name="star"></ion-icon>
+                      <span>&nbsp;4.5</span>
+                      <ion-icon class="ion-padding-start" name="chevron-down-outline"></ion-icon>
+                    </ion-label>
+                  </ion-item>
+                </ion-col>
+              </ion-row>
+              <ion-item-divider></ion-item-divider>
+      
+              <ion-row>
+                <ion-col size="2" class="ion-no-padding"><ion-item lines="none"><ion-label>#4</ion-label></ion-item></ion-col>
+                <ion-col size="5" class="ion-no-padding">
+                  <ion-item style="cursor: pointer;" lines="none" class="ion-no-padding ion-align-items-start">
+                    <ion-avatar class="ion-margin-end"><ion-img src="../assets/user4.jpg"></ion-img></ion-avatar>
+                    <ion-label>
+                      <h3><b>Debra Guierrero</b></h3>
+                      <p>Finance</p>
+                    </ion-label>
+                  </ion-item>
+                </ion-col>
+                <ion-col size="5" class="ion-no-padding">
+                  <ion-item lines="none" class="ion-no-padding">
+                    <ion-label>
+                      <span>95%</span>
+                      <ion-icon class="ion-padding-start" name="star"></ion-icon>
+                      <span>&nbsp;4.4</span>
+                      <ion-icon class="ion-padding-start" name="chevron-down-outline"></ion-icon>
+                    </ion-label>
+                  </ion-item>
+                </ion-col>
+              </ion-row>
+              <ion-item-divider></ion-item-divider>
+      
+              <ion-row>
+                <ion-col size="2" class="ion-no-padding"><ion-item lines="none"><ion-label>#5</ion-label></ion-item></ion-col>
+                <ion-col size="5" class="ion-no-padding">
+                  <ion-item style="cursor: pointer;" lines="none" class="ion-no-padding ion-align-items-start">
+                    <ion-avatar class="ion-margin-end"><ion-img src="../assets/user5.jpg"></ion-img></ion-avatar>
+                    <ion-label>
+                      <h3><b>Partricia Guierrero</b></h3>
+                      <p>Finance</p>
+                    </ion-label>
+                  </ion-item>
+                </ion-col>
+                <ion-col size="5" class="ion-no-padding">
+                  <ion-item lines="none" class="ion-no-padding">
+                    <ion-label>
+                      <span>95%</span>
+                      <ion-icon class="ion-padding-start" name="star"></ion-icon>
+                      <span>&nbsp;4.2</span>
+                      <ion-icon class="ion-padding-start" name="chevron-down-outline"></ion-icon>
+                    </ion-label>
+                  </ion-item>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card>
+        </div>
+      </ion-col>
+
+      <ion-col size="12" size-xl="3">
+        <div class="ion-padding-start">
+          <h3><b>Meetings</b></h3>
+        </div>
+        <ion-segment value="schedule">
+          <ion-segment-button value="schedule">
+            <b>Schedule Meetings</b>
+          </ion-segment-button>
+          <ion-segment-button value="past">
+            <b>Past Meetings</b>
+          </ion-segment-button>
+        </ion-segment>
+        <div class="ion-padding">
+          <b>Today</b>
+        </div>
+        <ion-item lines="none" class="ion-no-padding ion-margin-start">
+          <ion-text style="font-size: small;">9:00 AM</ion-text>
+            <ion-item lines="none">
+              <ion-icon class="ion-margin-end" name="stopwatch-outline"></ion-icon>
+              <ion-text style="font-size: small;">Starting Hands</ion-text>
+            </ion-item>
+            <ion-icon style="cursor: pointer;" slot="end" name="ellipsis-horizontal-outline"></ion-icon>
+        </ion-item>
+        <ion-item lines="none" class="ion-no-padding ion-margin-start">
+          <ion-text style="font-size: small;">10:30 AM</ion-text>
+            <ion-item lines="none">
+              <ion-icon class="ion-margin-end" name="bar-chart-outline"></ion-icon>
+              <ion-text style="font-size: small;">Initial Invitation</ion-text>
+            </ion-item>
+            <ion-icon style="cursor: pointer;" slot="end" name="ellipsis-horizontal-outline"></ion-icon>
+        </ion-item>
+        <ion-item lines="none" class="ion-no-padding ion-margin-start">
+          <ion-text style="font-size: small;">12:30 PM</ion-text>
+            <ion-item lines="none">
+              <ion-icon class="ion-margin-end" name="earth"></ion-icon>
+              <ion-text style="font-size: small;">From The Ground</ion-text>
+            </ion-item>
+            <ion-icon style="cursor: pointer;" slot="end" name="ellipsis-horizontal-outline"></ion-icon>
+        </ion-item>
+        <ion-item-divider class="ion-margin-top"></ion-item-divider>
+
+        <div class="ion-padding">
+          <b>May 7, 2021</b>
+        </div>
+        <ion-item lines="none" class="ion-no-padding ion-margin-start">
+          <ion-text style="font-size: small;">10:00 AM</ion-text>
+            <ion-item lines="none">
+              <ion-icon class="ion-margin-end" name="arrow-forward-outline"></ion-icon>
+              <ion-text style="font-size: small;">Ground Up</ion-text>
+            </ion-item>
+            <ion-icon style="cursor: pointer;" slot="end" name="ellipsis-horizontal-outline"></ion-icon>
+        </ion-item>
+        <ion-item-divider class="ion-margin-top"></ion-item-divider>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+</ion-content>

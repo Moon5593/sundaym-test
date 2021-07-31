@@ -1,0 +1,29 @@
+<ion-app>
+  <ion-content>
+    <ion-split-pane contentId="main" when="md">
+      <ion-menu contentId="main" side="start">
+        <ion-content>
+          <ion-list *ngFor="let item of sidelist_items; index as i" lines="none">
+            <ion-list-header *ngIf="i===0">
+              {{ 'NEON' | uppercase }}
+            </ion-list-header>
+            <ion-menu-toggle autoHide="false">
+              <ion-item [routerLink]="item.url" routerLinkActive="selected" routerDirection="forward">
+                <ion-icon slot="start" [name]="item.icon"></ion-icon>
+                <ion-label><h2>{{item.title}}</h2></ion-label>
+              </ion-item>
+            </ion-menu-toggle>
+          </ion-list>
+
+          <div class="ion-text-center ion-margin-top ion-padding-top">
+            <ion-label><b>Refer and Earn Rewards</b></ion-label>
+            <div class="ion-margin-top"><span style="font-size: x-small;">Invite startups or Experts and get a chance to win rewards on their Sign up.</span></div>
+            <ion-button><ion-icon slot="start" name="share-social-outline"></ion-icon>Refer & Earn</ion-button>
+          </div>
+          
+        </ion-content>
+      </ion-menu>
+    <ion-router-outlet id="main"></ion-router-outlet>
+    </ion-split-pane>
+  </ion-content>
+</ion-app>
